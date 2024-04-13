@@ -1,3 +1,7 @@
+<?php
+include("include-function.php");
+?>
+
 <html>
 <h1>
     <div style="text-align: center;">
@@ -26,4 +30,17 @@ echo "ㅋㅋㅋㅋ? 여기서도 변수 favorite_number_float($favorite_number_f
 echo "<br>";
 echo "last_name: $last_name";
 ?>
+
+// 외부 파일로부터 코드를 불러온다.
+// C언어의 #include, Java/JS 의 import 와 동일
+<h1>
+    <center>
+        <?php
+        // Include Function
+        echo "Copyright (c) " . date("Y") . " - All Rights Reserved";
+        echo "<br>";
+        echo "Copyright (c) " . $company_name . " " . date("Y") . " - All Rights Reserved";
+        ?>
+    </center>
+</h1>
 </html>
