@@ -1,46 +1,37 @@
-<?php
-include("include-function.php");
-?>
+<?php include("src/global.php") ?>
 
-<html>
-<h1>
-    <div style="text-align: center;">
-        <?php
-        // 주석은 보통 언어와 똑같습니다.
-        // html 안쪽에 코드가 들어갈 수 있습니다.
-        // 반대로 php 코드 안에 html이 들어갈 수도 있습니다.
-        echo "Hello World!<br>";
-        $first_name = "Yesung";
-        $favorite_number = 41;
-        $favorite_number_float = 41.33;
-        $last_name = $first_name;
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        echo $first_name;
-        echo "<br>";
-        echo $favorite_number;
-        echo "<br>";
-        echo $favorite_number_float;
-        echo "<br>";
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jquery dependency -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <!-- Bootstrap Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous" defer></script>
 
-        ?>
-    </div>
-</h1>
-<?php
-echo "ㅋㅋㅋㅋ? 여기서도 변수 favorite_number_float($favorite_number_float) 를 출력 가능";
-echo "<br>";
-echo "last_name: $last_name";
-?>
-
-// 외부 파일로부터 코드를 불러온다.
-// C언어의 #include, Java/JS 의 import 와 동일
-<h1>
-    <center>
-        <?php
-        // Include Function
-        echo "Copyright (c) " . date("Y") . " - All Rights Reserved";
-        echo "<br>";
-        echo "Copyright (c) " . $company_name . " " . date("Y") . " - All Rights Reserved";
-        ?>
-    </center>
-</h1>
+    <title><?php echo $title; ?></title>
+</head>
+<body style="height: 70rem">
+<header>
+    <?php include("src/navbar.php") ?>
+</header>
+<main style="height: 60rem; text-align: center; align-content: center">
+    <?php include("src/card.php"); ?>
+</main>
+<footer>
+    <?php include("src/footer.php") ?>
+</footer>
+</body>
 </html>
