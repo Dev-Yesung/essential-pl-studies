@@ -1,6 +1,7 @@
 import Controller from "./Controller.js";
 import Store from "./Store.js";
 import storage from "./storage.js";
+import SearchFormView from "./views/SearchFormView.js";
 
 const tag = "[main]";
 
@@ -9,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const store = new Store(storage);
 
-  const views = {};
+  const views = {
+    SearchFormView: new SearchFormView(),
+  };
 
   new Controller(store, views);
 });
