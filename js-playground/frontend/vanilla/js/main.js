@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const store = new Store(storage);
 
   const views = {
-    SearchFormView: new SearchFormView(),
+    searchFormView: new SearchFormView(),
   };
 
   new Controller(store, views);
