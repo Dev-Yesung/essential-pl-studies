@@ -1,5 +1,5 @@
 import View from "./View.js";
-import { qs } from "../helpers.js";
+import { qs, removeChildNodes } from "../helpers.js";
 
 export default class SearchResultView extends View {
   constructor() {
@@ -16,6 +16,11 @@ export default class SearchResultView extends View {
         : this.template.getEmptyMessage()
     );
     super.show();
+  }
+
+  hide() {
+    removeChildNodes("#search-result-view");
+    super.hide();
   }
 }
 

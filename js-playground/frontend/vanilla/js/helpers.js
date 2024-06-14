@@ -63,3 +63,11 @@ export const createPastDate = (date = 1, now = new Date()) => {
 export const createNextId = (list = []) => {
   return Math.max(...list.map((item) => item.id)) + 1;
 };
+
+export const removeChildNodes = (selector) => {
+  const rootNode = qs(selector);
+
+  while (rootNode.firstChild) {
+    rootNode.removeChild(rootNode.firstChild);
+  }
+};
